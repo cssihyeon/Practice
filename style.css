@@ -1,0 +1,50 @@
+.container{
+    display: block;
+    width: 200px;
+    height: 60px;
+    background-color: skyblue;
+    user-select: none;
+    color: floralwhite;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 5px;
+}
+.wrapper{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#check1:checked ~ .menu1 {
+    display: block;
+}
+#check2:checked ~ .menu2{
+    display: block;
+}
+#check1{
+    display: none;
+}
+#check2{
+    display: none;
+}
+.menu-item {
+    display: block;
+    width: 180px;
+    height: 50px;
+    background-color: pink;
+    user-select: none;
+    color: floralwhite;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 7px;
+    text-decoration: none;
+}
+.menu1{
+    display: none;
+}
+.menu2{
+    display: none;
+}
