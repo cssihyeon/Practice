@@ -1,0 +1,46 @@
+.container{
+    box-shadow: 0 0 20px rgb(80, 80, 80);
+    height: 800px;
+    width: 700px;
+    margin: auto;
+}
+.buttons{
+    height: 40px;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    text-align: center;
+    border-bottom: 3px solid #333;
+    line-height: 40px;
+}
+.button1,
+.button2,
+.button3 {
+    display: block;
+    flex: 1;
+    user-select: none;
+    font-weight: 700;
+}
+.content1,
+.content2,
+.content3{
+    display: none;
+    text-align: center;
+    padding: 100px;
+}
+#tab1,
+#tab2,
+#tab3{
+    display: none;
+}
+#tab1:checked ~ .buttons > .button1,
+#tab2:checked ~ .buttons > .button2,
+#tab3:checked ~ .buttons > .button3 {
+    background-color: black;
+    color: blanchedalmond;
+    transition: 0.4s;
+}
+#tab1:checked ~ .content1,
+#tab2:checked ~ .content2,
+#tab3:checked ~ .content3 {
+    display: block;
+}

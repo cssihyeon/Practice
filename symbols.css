@@ -1,0 +1,88 @@
+.container{
+    box-shadow: 0 0 10px rgb(0,0,0,0.3);
+    width: 600px;
+    height: 700px;
+    margin: auto;
+}
+.buttons{
+    text-align: center;
+    border-bottom: 5px solid rgb(55, 11, 95);
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+}
+.button1,
+.button2,
+.button3,
+.button4,
+.button5,
+.button6{
+    background-color: rgb(218, 199, 235);
+    flex: 1;
+    transition: 0.3s;
+    user-select: none;
+}
+.content1,
+.content2,
+.content3,
+.content4,
+.content5,
+.content6 {
+    display: none;
+    height: 80%;
+    /* width: 100%; */
+    margin: 20px;
+}
+.content1{
+    background: no-repeat center url("img/학교상징1.png");
+    background-size: contain;
+}
+.symbol-title-box {
+    margin-top: 30px;
+    border-bottom: 5px solid rgb(151, 97, 151);
+}
+.symbol-title{
+    background-color:rgb(151, 97, 151) ;
+    color: white;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px 10px 0 0;
+    font-size: 17px;
+}
+.symbol-sub-title{
+    color: rgb(135, 59, 158);
+    font-weight: 700;
+    font-size: 30px;
+}
+.symbol-content{
+    font-family: 'Zen Loop', cursive;
+}
+#tab1:checked ~ .buttons > .button1,
+#tab2:checked ~ .buttons > .button2,
+#tab3:checked ~ .buttons > .button3,
+#tab4:checked ~ .buttons > .button4,
+#tab5:checked ~ .buttons > .button5,
+#tab6:checked ~ .buttons > .button6{
+    display: block;
+    background-color: rgb(95, 60, 128);
+    color:white;
+}
+#tab1:checked ~ .content1,
+#tab2:checked ~ .content2,
+#tab3:checked ~ .content3,
+#tab4:checked ~ .content4,
+#tab5:checked ~ .content5,
+#tab6:checked ~ .content6{
+    display: block;
+}
+
+#tab1,
+#tab2,
+#tab3,
+#tab4,
+#tab5,
+#tab6{
+    display: none;
+}
