@@ -1,0 +1,86 @@
+body{
+    font-family: 'Jua', sans-serif;
+}
+.bold-text,
+.logo {
+    display: none;
+}
+.main-text{
+    width: 90%;
+    max-width: 350px;
+    color: #333;
+    font-size: 14px;
+    user-select: none;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+}
+.background{
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    height: 100%;
+    max-width: 450px;
+    background: no-repeat center url("img/시작문구배경.png");
+    background-size: contain;
+    transition: 1.5s;
+}
+.next1,
+.next2,
+.next3 {
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    background-color: aliceblue;
+    color: rgb(118, 59, 173);
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    line-height: 35px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 15%;
+    margin: 9px;
+    padding: 3px;
+}
+.buttons {
+    position: absolute;
+    bottom: 280px;
+}
+a{
+    text-decoration: none;
+    color:  rgb(118, 59, 173);
+}
+.next2,
+.next3{
+    display: none;
+}
+#tab1:checked ~.container > .main-text,
+#tab1:checked ~ .container > .buttons > .next1 {
+    display: none;
+}
+#tab1:checked ~.container > .bold-text,
+#tab1:checked ~ .container > .buttons > .next2 {
+    display: block;
+    animation: bgAppear 1.5s linear;
+}
+#tab2:checked ~.container > .bold-text,
+#tab2:checked ~.container > .buttons > .next2 {
+    display: none;
+}
+#tab2:checked ~.container > .logo,
+#tab2:checked ~.container > .buttons > a > .next3 {
+    display: block;
+    animation: bgAppear 1.5s linear;
+}
+@keyframes bgAppear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
